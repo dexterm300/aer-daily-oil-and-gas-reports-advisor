@@ -2,7 +2,7 @@
 
 This project deploys a serverless pipeline that:
 - Downloads AER ST1 and ST100 files on schedule
-- Stores them briefly in S3 `dex-s3-bucket-aer-files-raw`
+- Stores them briefly in S3
 - Summarizes contents using Amazon Bedrock
 - Publishes the summary to an SNS topic with an email subscription
 - Deletes the files from S3 after publish
@@ -57,4 +57,5 @@ Temporarily set `REPORT_DATE=YYYY-MM-DD` in the Lambda environment, invoke, then
 ```bash
 terraform destroy
 ```
+
 
